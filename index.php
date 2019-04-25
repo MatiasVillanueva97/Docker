@@ -5,6 +5,8 @@
 
 
 
+
+
 <?php
 $link = mysql_connect('mysql', 'root', 'TM1q2w3e.');
 if (!$link) {
