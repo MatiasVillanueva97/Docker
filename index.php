@@ -1,4 +1,7 @@
 
+
+
+
 <?php
 $link = mysql_connect('mysql', 'root', 'TM1q2w3e.');
 if (!$link) {
@@ -8,4 +11,3 @@ echo 'Connected successfully';
 mysql_close($link);
 echo "<br>EDSI";
 ?>
-
