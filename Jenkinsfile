@@ -1,5 +1,6 @@
 
 
+
 pipeline{
 	agent any 
 
@@ -25,9 +26,9 @@ pipeline{
 		stage('Deploy Container'){
 			
 			steps{
-							sh 'cd /home/backup/compose2'
+			sh 'cd /home/backup/compose2'
 
-			docker-compose up -d 
+			sh 'docker compose up -d'
 			}
 
 		}
