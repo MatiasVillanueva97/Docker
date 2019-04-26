@@ -1,6 +1,5 @@
 
 
-
 pipeline{
 	agent any 
 
@@ -17,7 +16,7 @@ pipeline{
 			}}
 		stage('Build Image'){
 			steps{
-			sh 'docker build --tag=php542.0'
+			sh 'docker build --tag=php542.0 .'
 			}
 
 
