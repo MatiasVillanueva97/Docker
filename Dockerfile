@@ -5,5 +5,5 @@ RUN apt-get -y install libxslt-dev
 RUN docker-php-ext-install mysql mbstring exif mysqli xsl
 RUN docker-php-ext-enable mysql mbstring exif mysqli xsl
 RUN cd /var/www/html
-RUN touch index.php
-RUN echo '<?php $link = mysql_connect('mysql', 'root', 'TM1q2w3e'); if (!$link) {die('Could not connect: ' . mysql_error());}echo 'Connected successfully';mysql_close($link);?>'>index.php
+RUN docker cp db.php  php542:/db.php
+RUN docker cp index.php php542:/index.php
