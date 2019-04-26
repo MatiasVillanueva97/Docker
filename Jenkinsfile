@@ -1,6 +1,5 @@
 
 
-
 pipeline{
 	agent any 
 
@@ -17,7 +16,6 @@ pipeline{
 			}}
 		stage('Build Image'){
 			steps{
-							sh 'cd /home/backup/php542.0'
 			sh 'docker build --tag=php542.0'
 			}
 
@@ -25,8 +23,7 @@ pipeline{
 		}
 		stage('Deploy Container'){
 			
-			steps{
-			sh 'cd /home/backup/compose2'
+			steps{a
 
 			sh 'docker compose up -d'
 			}
