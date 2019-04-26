@@ -13,7 +13,7 @@ pipeline{
 			steps{
 
 				sh 'sudo docker ps'
-			}
+				} }
 		stage('Build Image'){
 			steps{
 							sh 'cd /home/backup/php542.0'
