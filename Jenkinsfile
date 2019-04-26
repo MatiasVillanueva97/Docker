@@ -27,6 +27,14 @@ pipeline{
 				}
 			}
 
+		stage('Push'){
+			steps{
+				script{
+					docker.withRegristry('',registryCredential){
+						dockerImage.push();
+					}
+				}
+			}
 
 		}
 
