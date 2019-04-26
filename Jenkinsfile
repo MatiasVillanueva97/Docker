@@ -1,5 +1,6 @@
 
 
+
 pipeline{
 	agent any 
 
@@ -23,7 +24,7 @@ pipeline{
 		}
 		stage('Deploy Container'){
 			
-			steps{a
+			steps{
 
 			sh 'docker compose up -d'
 			}
