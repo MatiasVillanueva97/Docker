@@ -27,7 +27,7 @@ pipeline{
 			steps{
 							sh 'cd /home/backup/compose2'
 
-			docker compose up -d 
+			docker-compose up -d 
 			}
 
 		}
