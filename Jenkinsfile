@@ -1,5 +1,3 @@
-
-
 pipeline{
 
 	environment{
@@ -30,15 +28,10 @@ pipeline{
 		stage('Push'){
 			steps{
 				script{
-					docker.withRegristry('',registryCredential){
-						dockerImage.push()
-					}
+					docker.withRegistry('',registryCredential){dockerImage.push()}
 				}
 			}
 
 		}
-
-		}
 	}
-
 
