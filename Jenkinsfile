@@ -1,6 +1,12 @@
 
 
 pipeline{
+
+	environment{
+
+		registry = "matiasv97/repository"
+		registryCredential = "dockerhub"
+	}
 	agent any 
 
 	stages{
@@ -16,7 +22,7 @@ pipeline{
 			}}
 		stage('Build Image'){
 			steps{
-			sh 'docker build --tag=php542 .'
+			sh 'docker build --tag=php542.0 .'
 			}
 
 
@@ -25,7 +31,7 @@ pipeline{
 			
 			steps{
 
-			sh 'docker-compose up -d'
+			sh 'docker compose up -d'
 			}
 
 		}
