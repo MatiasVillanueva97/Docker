@@ -22,17 +22,11 @@ pipeline{
 			}}
 		stage('Build Image'){
 			steps{
-			sh 'docker build --tag=php542.0 .'
+				script{
+					dockerImage=docker.build registry + ":$BUILD_NUMBER"
+				}
 			}
 
-
-		}
-		stage('Deploy Container'){
-			
-			steps{
-
-			sh 'docker compose up -d'
-			}
 
 		}
 
